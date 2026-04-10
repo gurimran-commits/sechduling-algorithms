@@ -13,7 +13,7 @@ int main(){
     }
     for(i=0;i<n;i++){
         for(j=0;j<n-i-1;j++){
-            if(bt[j]=bt[j+1]){
+            if(bt[j]>bt[j+1]){
                 int temp_bt=bt[j];
                 bt[j]=bt[j+1];
                 bt[j+1]=temp_bt;
@@ -30,9 +30,10 @@ int main(){
     for(i=0;i<n;i++){
         tat[i]=wt[i]+bt[i];
     }
-    for(i=0;i<n;i++){
-        ct[i]=tat[i];
-    }
+    ct[0] = bt[0];
+for(i=1;i<n;i++){
+    ct[i] = ct[i-1] + bt[i];
+}
     for(i=0;i<n;i++){
         avg_tat+=tat[i];
         avg_wt+=wt[i];
@@ -43,7 +44,7 @@ int main(){
     for(i=0;i<n;i++){
         printf("p%d\t%d\t%d\t%d\t%d\n",process[i],bt[i],ct[i],tat[i],wt[i]);
     }
-    printf("\naverage waiting time =%2f\n",avg_wt);
-    printf("\naverage turnaround time =%2f\n", avg_tat); 
+    printf("\naverage waiting time =%.2f\n",avg_wt);
+    printf("\naverage turnaround time =%.2f\n", avg_tat); 
     return 0;
 }
