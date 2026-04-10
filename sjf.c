@@ -42,7 +42,7 @@ for(i=1;i<n;i++){
     avg_wt/=n;
     printf("\nprocess\tbt\tct\ttat\twt\n");
     for(i=0;i<n;i++){
-        printf("p%d\t%d\t%d\t%d\t%d\n",process[i],bt[i],ct[i],tat[i],wt[i]);
+        printf("p%d\t\t%d\t%d\t%d\t%d\n",process[i],bt[i],ct[i],tat[i],wt[i]);
     }
     printf("\naverage waiting time =%.2f\n",avg_wt);
     printf("\naverage turnaround time =%.2f\n", avg_tat); 
