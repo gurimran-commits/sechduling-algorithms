@@ -4,7 +4,7 @@ int main()
     int i,n;
     float avg_tat = 0 , avg_wt = 0 ;
     int process[20],at[20],bt[20],ct[20],tat[20],wt[20],rt[20];
-    printf("==== this is a priority algorithm (non preemptive)====");
+    printf("=== this is a priority algorithm (non preemptive)===");
     printf("\nenter the number of total processes : ");
     scanf("%d",&n);
 
