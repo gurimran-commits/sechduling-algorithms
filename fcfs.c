@@ -25,7 +25,7 @@ int main (){
     for(i=0;i<n;i++) {
         printf("p%d\t\t%d\t%d\t%d\t%d\n",process[i],bt[i],ct[i],tat[i],wt[i]);
     }
-    printf("\n average turnaround time :%2f",avg_tat/n);
-    printf("\n average waiting time :%2f",avg_wt/n);
+    printf("\n average turnaround time :%.2f",avg_tat/n);
+    printf("\n average waiting time :%.2f",avg_wt/n);
     return 0;
 }
